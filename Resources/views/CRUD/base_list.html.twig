@@ -1,0 +1,65 @@
+{% extends 'SonataAdminBundle:CRUD:base_list.html.twig' %}
+
+
+{% block batch %}
+    {{ parent() }}
+    <button class="btn btn-warning" id="updateDrag">Sauvegarder l'ordre</button>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+
+        $(document).ready(function () {
+
+            var dataPositionList = {};
+            $('tbody .draggable').each(function (index) {
+                dataPositionList[index] = { 'id' : $(this).data("id"), 'position': $(this).data("position") };
+            });
+
+            var fixHelperModified = function (e, tr) {
+                var $originals = tr.children();
+                var $helper = tr.clone();
+                $helper.children().each(function (index)
+                {
+                    $(this).width($originals.eq(index).width())
+                });
+                return $helper;
+            };
+
+            $('tbody').sortable({
+                helper: fixHelperModified,
+                handle: ".draggable",
+                placeholder: "ui-state-highlight",
+                axis: 'y',
+            });
+
+            $("#updateDrag").click(function (event) {
+                event.preventDefault();
+                
+                $.map($('tbody').find('.draggable'), function(el, index) {
+                    dataPositionList[index]['id'] = $(el).attr('data-id');
+                });
+
+                $.ajax({
+                    data: {data: dataPositionList},
+                    type: 'POST',
+                    url: '{{ admin.generateUrl('drag') }}',
+                    success: function (data) {
+                        alert(data);
+                    },
+                });
+            });
+
+
+        });
+
+
+
+
+    </script>
+    
+
+{% endblock %}
+
+

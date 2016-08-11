@@ -1,0 +1,8 @@
+services:
+    aliocza_sortable_ui.position.orm:
+        class: Aliocza\SortableUiBundle\Services\PositionORMHandler
+        public: false
+        arguments:
+            entityManager: "@doctrine.orm.entity_manager"
+        calls:
+            - [ 'setPositionField', [%aliocza.sortable.ui.position.field%]]

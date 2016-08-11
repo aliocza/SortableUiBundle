@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>flash_error_no_rights_update_position</source>
+                <target>Vous n'avez pas les droits pour changer la position</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>flash_error_no_post_update_position</source>
+                <target>Les éléments envoyés ne provient pas d'un POST</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>flash_error_no_post_update_position</source>
+                <target>L'ordre des éléments a été sauvegardé</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>flash_error_no_post_update_position</source>
+                <target>L'ordre des éléments a été sauvegardé</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>flash_error_post_update_position</source>
+                <target>L'ordre des éléments n'a pas été sauvegardé !</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
