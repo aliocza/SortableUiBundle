@@ -1,0 +1,36 @@
+{
+    "name": "aliocza/sortable-ui-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a way to sort your admin listing",
+    "keywords": ["sortable","admin","sonata", "drag"],
+    "homepage": "https://github.com/aliocza/SortableUiBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aliocha Mazurkiewicz",
+            "email": "contact@aliocha.be"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/framework-bundle": ">=2.1",
+        "symfony/form": ">=2.1"
+    },
+    "require-dev": {
+        "gedmo/doctrine-extensions": ">=2.2"
+    },
+    "suggest": {
+        "sonata-project/admin-bundle": "Can be easily integrated with Sonata Admin bundle",
+        "stof/doctrine-extensions-bundle": "1.1.*@dev"
+    },
+    "autoload": {
+        "psr-0": { "Aliocza\\SortableUiBundle": "" }
+    },
+    "target-dir": "Aliocza/SortableUiBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
+
