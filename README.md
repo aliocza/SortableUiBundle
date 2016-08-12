@@ -94,6 +94,11 @@ In order to add new routes for these actions we are also adding the following me
     // ...
     private $positionService;
     
+    protected $datagridValues = array(
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'position',
+        );
+    
     protected function configureRoutes(RouteCollection $collection) {
     // ...
         $collection->add('drag', 'drag');
