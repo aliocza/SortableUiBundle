@@ -4,23 +4,23 @@
         <body>
             <trans-unit id="1">
                 <source>flash_error_no_rights_update_position</source>
-                <target>Vous n'avez pas les droits pour changer la position</target>
+                <target>You do not have access for change the position</target>
             </trans-unit>
             <trans-unit id="2">
                 <source>flash_error_update_position</source>
-                <target>Une erreur s'est produite lors de la mise à jour des données</target>
+                <target>An error occurred while updating data</target>
             </trans-unit>
             <trans-unit id="3">
                 <source>flash_error_no_post_update_position</source>
-                <target>Les éléments envoyés ne provient pas d'un POST</target>
+                <target>Sent Items not from a POST</target>
             </trans-unit>
             <trans-unit id="4">
                 <source>flash_success_post_update_position</source>
-                <target>L'ordre des éléments a été sauvegardé</target>
+                <target>The order of elements has been saved</target>
             </trans-unit>
             <trans-unit id="5">
                 <source>save_btn_position</source>
-                <target>Sauvegarder l'ordre</target>
+                <target>Save order</target>
             </trans-unit>
         </body>
     </file>

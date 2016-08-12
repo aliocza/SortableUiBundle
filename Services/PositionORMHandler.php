@@ -32,13 +32,14 @@ class PositionORMHandler extends PositionHandler
     {
         
         foreach ($dataPositionList as $position){
+
             
            $editId = $position['id'];
            $position = $position['position'];
             
             $qb = $this->em->createQueryBuilder();
             $q = $qb->update($entity, 'u')
-                    ->set('u.position', $qb->expr()->literal($position))
+                    ->set('u.'.$setter, $qb->expr()->literal($position))
                     ->where('u.id = ?1')
                     ->setParameter(1, $editId)
                     ->getQuery();

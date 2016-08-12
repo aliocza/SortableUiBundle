@@ -34,7 +34,7 @@ class SortableUiAdminController extends CRUDController {
             $entity = $this->admin->getClass();
             
             
-            $setter = sprintf('set%s', ucfirst($positionService->getPositionFieldByEntity($entity)));
+            $setter = sprintf($positionService->getPositionFieldByEntity($entity));
             
             
             $dataPositionList = $request->request->get('data');
@@ -44,7 +44,7 @@ class SortableUiAdminController extends CRUDController {
             if($updateDb === true){
                 return new Response($translator->trans('flash_success_post_update_position'));
             }else{
-                return new Response($translator->trans('flash_error_post_update_position'));
+                return new Response($translator->trans('flash_error_update_position'));
             }
         }
         return new Response($translator->trans('flash_error_no_post_update_position'));
